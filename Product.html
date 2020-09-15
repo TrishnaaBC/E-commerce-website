@@ -1,0 +1,97 @@
+<!-- this is for product page -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Store</title>
+
+	<meta charset="utf-8"/>
+	<meta name="description" content="Online fashion store for women"/>
+	<meta name="keywords" content="HTML, CSS, JavaScript"/>
+	<meta name="author" content="Trishna BC"/>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style>
+	body {
+		background-size: 100% 100%;
+	}
+	img{
+		height: 450px;
+		width: 100%;
+	}
+	</style>
+</head>
+<body>
+	<!-- creating a section for header -->
+	<header>
+		<!-- creating a division to insert logo -->
+		<div class="logo">
+			<img src="images/logo.png">
+		</div>
+		<!-- creating navigation bar -->
+		<ul class="nav">
+			<li><a href="index.html">Home</a></li>
+			<li class="active"><a href="product.html">Product</a></li>
+			<li><a href="blog.html">Blog</a></li>
+			<li><a href="research.html">Research</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="login.html">Login</a></li>
+		</ul>
+	</header>
+	
+	<!-- creating a section -->
+	<section>
+		<!-- creating division slider for image slider -->
+		<div class="slider">
+			<div id="img">
+      			<img src="images/a.jpg">
+    		</div>
+		</div>
+
+  		<!-- adding java script -->
+  		<script>
+			var images = ['images/b.jpg', 'images/c.jpg', 'images/d.jpg', 'images/a.jpg'];
+			var x = 0;
+			var imgs = document.getElementById('img');
+			setInterval(slider, 3000);
+
+			// getting all the images
+			function slider() {
+				if (x < images.length) {
+        		x = x + 1;
+      			} 
+      			else {
+        		x = 1;
+      			}
+				imgs.innerHTML = "<img src=" + images[x - 1] + ">";
+			}
+		</script>
+		<!-- inserting heading -->
+		<h2 style="color: #d4aa2c; position: absolute; top: 30%;">Select the products</h2>
+		<!-- creating division to create button inside the slider -->
+		<div class="button">
+			<a href="clothing.html" class="btn">Clothing</a>
+			<a href="accessories.html" class="btn">Accessories</a>
+		</div>
+	</section>
+
+	<!-- creating footer of webpage -->
+	<footer>
+		<!-- creating division fot of the footer -->
+		<div class="fot" style="margin-top: 50px; margin-bottom: 80px;">
+			<!-- division box to insert text and images with external links -->
+			<div class="box" style="text-align: center; margin-right: 70%;">
+				<p style="font-size: 25px;">Follow us on</p><br>
+				<a href="https://www.facebook.com"><img src="images/fb.jpg"></a>
+				<a href="https://www.instagram.com"><img src="images/ig.jpg"></a>
+				<a href="https://www.twitter.com"><img src="images/tw.jpg"></a>
+			</div>
+			<!-- breaking line -->
+			<br>
+			<p style="font-size: 20px;">Address: Kumaripati, Lalitpur</p><br>
+			<p style="font-size: 20px;">Phone: 9248876565, 9831245468</p><br>
+			<hr/><br>
+			<p style="font-size: 25px; margin-bottom: 50px;">&copy; My Store</p>
+		</div>
+	</footer>
+</body>
+</html>

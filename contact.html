@@ -1,0 +1,116 @@
+<!-- this is for contact page -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Store</title>
+
+	<meta charset="utf-8"/>
+	<meta name="description" content="Online fashion store for women"/>
+	<meta name="keywords" content="HTML, CSS, JavaScript"/>
+	<meta name="author" content="Trishna BC"/>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style>
+	body {
+		background-size: 80% 100%;
+	}
+	</style>
+</head>
+<body>
+	<!-- creating a section for header -->
+	<header>
+		<!-- creating a division to insert logo -->
+		<div class="logo">
+			<img src="images/logo.png">
+		</div>
+		<!-- creating navigation bar -->
+		<ul class="nav">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="product.html">Product</a></li>
+			<li><a href="blog.html">Blog</a></li>
+			<li><a href="research.html">Research</a></li>
+			<li class="active"><a href="contact.html">Contact</a></li>
+			<li><a href="login.html">Login</a></li>
+		</ul>
+	</header>
+	
+	<!-- creating a section -->
+	<section>
+		<!-- creating div container2 for section -->
+		<div class="container2">
+			<!-- ading heading -->
+			<h3 style="text-align: center; font-size: 32px; text-transform: uppercase;">Give us your feedback</h3>
+			<!-- designing a form -->
+			<form name="messageForm" onsubmit="validateForm()">
+				<!-- creating text fields, radio button and send button -->
+				<p>First Name: <input type="text" name="firstname" class="textholder"placeholder="Enter your first name"></p>
+				<p>Last Name: <input type="text" name="lastname" class="textholder" placeholder="Enter your last name"></p>
+				<p>Gender: <input type="radio" name="gender" value="male" checked>Male
+				<input type="radio" name="gender" value="female">Female</p>
+				<p>Message: <br><textarea name="message" rows="10" cols="86" placeholder="Enter Message"></textarea></p>
+				<p><input type="submit" value="Send" style="width: 10%; height: 30px;"></p>
+			</form>
+
+			<!-- adding java script -->
+			<script>
+				//calling all input texts
+				function validateForm() {
+					var fname = document.forms["messageForm"]["firstname"].value;
+					var lname = document.forms["messageForm"]["lastname"].value;
+					var gender = document.forms["messageForm"]["gender"].value;
+					var message = document.forms["messageForm"]["message"].value;
+
+					//for displaying pop-up message
+					if (fname == ""){
+						if (lname == "" || message == ""){
+							alert("Please enter the empty fields.")
+						}
+						else{
+							alert("Please enter your first name.")
+						}
+					}
+					else if (lname == ""){
+						if (fname == "" || message == ""){
+							alert("Please enter the empty fields.")
+						}
+						else{	
+							alert("Please enter your last name.")
+						}
+					}
+					else if (message == ""){
+						if (fname == "" || lname == ""){
+							alert("Please enter the empty fields.")
+						}
+						else{
+							alert("Please write your message.")
+						}
+					}	
+					else {
+						alert("Thank you for your feedback.");
+					}
+				}
+			</script>
+		</div>
+	</section>
+
+	<!-- creating footer of webpage -->
+	<footer>
+		<!-- creating division fot of the footer -->
+		<div class="fot" style="margin-top: 50px; margin-bottom: 80px;">
+			<!-- division box to insert text and images with external links -->
+			<div class="box" style="text-align: center; margin-right: 70%;">
+				<p style="font-size: 25px;">Follow us on</p><br>
+				<a href="https://www.facebook.com"><img src="images/fb.jpg"></a>
+				<a href="https://www.instagram.com"><img src="images/ig.jpg"></a>
+				<a href="https://www.twitter.com"><img src="images/tw.jpg"></a>
+			</div>
+			<!-- breaking line -->
+			<br>
+			<p style="font-size: 20px;">Address: Kumaripati, Lalitpur</p><br>
+			<p style="font-size: 20px;">Phone: 9248876565, 9831245468</p><br>
+			<hr/><br>
+			<p style="font-size: 25px; margin-bottom: 50px;">&copy; My Store</p>
+		</div>
+	</footer>
+</body>
+</html>

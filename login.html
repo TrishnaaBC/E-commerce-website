@@ -1,0 +1,124 @@
+<!-- this is for login page -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Store</title>
+
+	<meta charset="utf-8"/>
+	<meta name="description" content="Online fashion store for women"/>
+	<meta name="keywords" content="HTML, CSS, JavaScript"/>
+	<meta name="author" content="Trishna BC"/>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+	<!-- creating a section for header -->
+	<header>
+		<!-- creating a division to insert logo -->
+		<div class="logo">
+			<img src="images/logo.png">
+		</div>
+		<!-- creating navigation bar -->
+		<ul class="nav">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="product.html">Product</a></li>
+			<li><a href="blog.html">Blog</a></li>
+			<li><a href="research.html">Research</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li class="active"><a href="login.html">Login</a></li>
+		</ul>
+	</header>
+
+	<!-- creating a section -->
+	<section>
+		<!-- creating div bg for section -->
+		<div class="bg">
+			<!-- ading heading -->
+			<h1>Please Log In</h1>
+			<!-- designing a form -->
+			<form name="messageForm" onsubmit="validateForm()">
+				<!-- creating text fields and login button -->
+				<p>First Name: <input type="text" name="firstname" class="textholder"placeholder="Enter your first name"></p>
+				<p>Last Name: <input type="text" name="lastname" class="textholder" placeholder="Enter your last name"></p>
+				<p>Email: <input type="text" name="email" class="textholder" placeholder="Enter your email"</p>
+				<p>Phone no: <input type="text" name="phoneno" class="textholder" placeholder="Enter your phone number"</p>
+				<p>Address: <input type="text" name="address" class="textholder" placeholder="Enter your address"</p>
+				<p><input type="submit" value="Log In" style="width: 10%; height: 30px;"></p>
+			</form>
+
+			<!-- adding java script -->
+			<script>
+				//calling all input texts
+				function validateForm() {
+					var fname = document.forms["messageForm"]["firstname"].value;
+					var lname = document.forms["messageForm"]["lastname"].value;
+					var mail = document.forms["messageForm"]["email"].value;
+					var ph = document.forms["messageForm"]["phoneno"].value;
+					var add = document.forms["messageForm"]["address"].value;
+
+					
+				 	//for displaying pop-up message
+				 	if (fname == "" || lname == "" || message == "" || mail == "" || ph == "" || add == ""){
+						alert("Empty fields found. Please fill the empty place.");
+					}
+					else {
+						alert("Thank you for the log in.");
+					}
+				}
+			</script>
+		</div>
+	</section>
+
+	<!-- creating footer of webpage -->
+	<footer>
+		<!-- creating division fot of the footer -->
+		<div class="fot" style="margin-top: 50px; margin-bottom: 80px;">
+			<!-- division box to insert text and images with external links -->
+			<div class="box" style="text-align: center; margin-right: 70%;">
+				<p style="font-size: 25px;">Follow us on</p><br>
+				<a href="https://www.facebook.com"><img src="images/fb.jpg"></a>
+				<a href="https://www.instagram.com"><img src="images/ig.jpg"></a>
+				<a href="https://www.twitter.com"><img src="images/tw.jpg"></a>
+			</div>
+			<!-- breaking line -->
+			<br>
+			<p style="font-size: 20px;">Address: Kumaripati, Lalitpur</p><br>
+			<p style="font-size: 20px;">Phone: 9248876565, 9831245468</p><br>
+			<hr/><br>
+			<p style="font-size: 25px; margin-bottom: 50px;">&copy; My Store</p>
+		</div>
+	</footer>
+
+	<style>
+		.bg{
+			background-image: url(images/e.jpg);
+			background-size: cover;
+			width: 100%;
+			height: 100%;
+			line-height: 50px;
+		}
+		h1{
+			text-align: center; font-size: 32px; 
+			text-transform: uppercase; letter-spacing: 20px;
+			color: white;
+		}
+		form{
+			margin-top: 50px;
+		}
+		.textholder{
+			width: 500px;
+			height: 35px;
+			border-bottom: 1px solid black;
+			color: black;
+			font-size: 15px;
+			margin-bottom: 30px;
+		}
+		form p{
+			font-size: 25px;
+			color: white;
+			text-align: center;
+		}
+	</style>
+</body>
+</html>

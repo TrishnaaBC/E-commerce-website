@@ -1,0 +1,178 @@
+/* for the body, header and footer part of all webpages */
+/* creating margin, padding and size of website*/
+*{
+	margin: 0;
+	padding: 0;
+	size: 100% 100%;
+}
+/* for the width of the body of website */
+body{
+	width: 100%;
+}
+/* for width and height of header part of the body */
+header{
+	width: 100%;
+	height: 115px;
+}
+/* for logo size and position */
+.logo img{
+	width: 380px;
+	height: auto;
+	float: left;
+}
+/* giving style to navigation bar of website */
+.nav{
+	float: right;
+	list-style: none;
+	margin-top: 5%;
+	margin-bottom: 20px;
+}
+/* for the list to display in horizonatal block */
+.nav li{
+	display: inline-block;
+}
+/* styling font of the nav bar */
+.nav li a{
+	color: black;
+	text-decoration: none;
+	padding: 5px 25px;
+	font-family: "Roboto"; 
+	font-size: 15px;
+}
+/* to show the nav button is active */ 
+.nav li.active a{
+	border: 1px solid black;
+}
+/* adding hover effect in the nav bar */
+.nav li a:hover{
+	border: 1px solid black;
+}
+/* styling the size of the footer */
+.fot{
+	width: 100%;
+	height: 100px;
+}
+/* styling text of footer */
+.fot p{
+	text-align: center;
+	color: black;
+}
+/* for footer image */
+.fot img{
+	width: 10%;
+	height: 10%;
+	margin: 5px;
+}
+
+/* for index page */
+/* styling size of the conatiner */
+.conatiner{
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+/* for width of row1 */
+.row1{
+	width: 100%;
+}
+/* for width and position of class column */
+.column {
+	float: left;
+	width: 50%;
+}
+/* to display another image after the first image in row1 */
+.row1::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+/* styling the heading */
+h2{
+	font-size: 72px;
+	font-weight: bold;
+	text-align: center;
+	color: #852d26;
+	position: absolute;
+	bottom: 43%;
+	width: 100%;
+	letter-spacing: 15px;
+}
+/* for width of row2 */
+.row2{
+	width: 100%;
+	/*display: flex;*/
+}
+/* for width and position of class column */
+.image{
+	float: left;
+	width: 50%;
+	/*flex: 49%;
+	margin: 5px;*/
+}
+/* to display another image after the first image in row2 */
+.row2::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/* for product page */
+/* styling the size and border of slider */
+.slider {
+    width: 100%;
+    height: 450px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px grey;  
+}
+/* adding the button inside the slider */
+.button{
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+/* styling the button */
+.btn{
+	border: 2px solid white;
+	padding: 20px 60px;
+	color: white;
+	text-decoration: none;
+	transition: 0.6s ease;
+}
+/* adding hover effect on button */
+.btn:hover{
+	background-color: white;
+	color: #000;
+}
+
+/* for contact page */
+/* inserting background image and size of the class container2 */ 
+.container2{
+	background-image: url(../images/6.jpg);
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	line-height: 50px;
+}
+/* creating mergin from top for form */
+form{
+	margin-top: 50px;
+}
+/* styling textholder */
+.textholder{
+	width: 500px;
+	height: 35px;
+	border-bottom: 1px solid black;
+	color: black;
+	font-size: 15px;
+	margin-bottom: 30px;
+}
+/* styling text of form */
+form p{
+	font-size: 25px;
+	color: black;
+	text-align: center;
+}
+

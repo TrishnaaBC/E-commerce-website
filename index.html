@@ -1,0 +1,93 @@
+<!-- this is for home page -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Store</title>
+
+	<meta charset="utf-8"/>
+	<meta name="description" content="Online fashion store for women"/>
+	<meta name="keywords" content="HTML, CSS, JavaScript"/>
+	<meta name="author" content="Trishna BC"/>
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<!-- creating a section for header -->
+	<header>
+		<!-- creating a division to insert logo -->
+		<div class="logo">
+			<img src="images/logo.png">
+		</div>
+		<!-- creating navigation bar -->
+		<ul class="nav">
+			<li class="active"><a href="index.html">Home</a></li>
+			<li><a href="product.html">Product</a></li>
+			<li><a href="blog.html">Blog</a></li>
+			<li><a href="research.html">Research</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="login.html">Login</a></li>
+		</ul>
+	</header>
+
+	<!-- creating a section -->
+	<section>
+		<!-- creating a division for container of the section -->
+		<div class="conatiner">
+			<!-- creating division row1 to insert images -->
+			<div class="row1">
+				<div class="column">
+					<img src="images/2.jpg" style="width: 100%">
+				</div>
+				<div class="column">
+					<img src="images/4.jpg" style="width: 100%">
+				</div>
+				<!-- creating heading for conatiner -->
+				<h2>Buy latest collection</h2>
+			</div>	
+			
+			<!-- creating division row2 to insert images -->
+			<div class="row2">
+				<div class="image">
+					<img src="images/3.jpg" style="width: 100%;">
+				</div>
+				<div class="image">
+					<img src="images/a.jpg" style="width: 100%;">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- creating footer of webpage -->
+	<footer>
+		<!-- creating division fot of the footer -->
+		<div class="fot" style="margin-top: 20px; margin-bottom: 80px;">
+			<!-- division box to insert text and images with external links -->
+			<div class="box" style="text-align: center; margin-right: 70%;">
+				<p style="font-size: 20px;">Follow us on</p><br>
+				<a href="https://www.facebook.com"><img src="images/fb.jpg"></a>
+				<a href="https://www.instagram.com"><img src="images/ig.jpg"></a>
+				<a href="https://www.twitter.com"><img src="images/tw.jpg"></a>
+			</div>
+			<!-- divison dt to insert date-time -->
+			<div class="dt">
+        		<p align="center"id="date"></p>
+
+        		<!-- adding java script -->
+    			<script>
+	      		//calling the function to display date-time
+	      		function display_date() {
+	        	document.getElementById('date').innerHTML = Date();
+	        	setTimeout(display_date,1000);
+	      		}
+	     		display_date();
+  				</script>
+			</div>
+			<!-- breaking line -->
+			<br>
+			<p style="font-size: 20px;">Address: Kumaripati, Lalitpur</p><br>
+			<p style="font-size: 20px;">Phone: 9248876565, 9831245468</p><br><hr/><br>
+			<p style="font-size: 25px; margin-bottom: 30px;">&copy; My Store</p>
+		</div>
+	</footer>
+</body>
+</html>
